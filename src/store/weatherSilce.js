@@ -1,10 +1,7 @@
 import { createSlice, current } from "@reduxjs/toolkit";
 
 const initialState = {
-    location:{
-        latitude:0,
-        longitude:0
-    },
+    location:{},
     weatherInfo:{
         current:{},
         forecast:{}
@@ -16,7 +13,7 @@ const weatherSlice = createSlice({
     initialState,
     reducers:{
         setLocation:(state,action)=>{
-            state.location= action.payload
+            state.location = {lat:action.payload[0],lng:action.payload[1]}
         },
         setCurrentWeather:(state,action)=>{
             state.weatherInfo.current = action.payload
