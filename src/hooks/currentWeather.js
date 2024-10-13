@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState,useEffect } from "react";
 import { useSelector } from "react-redux";
 
-function weatherInfo(){
+function currentInfo(){
     const location = useSelector(state=>state.location)
     const [data,setData] = useState({})
     const apiKey = '9c4711a44bd52c6f69da6ddafd193fcd'
@@ -24,4 +24,4 @@ function weatherInfo(){
 }
 
 
-export default weatherInfo
+export default currentInfo
