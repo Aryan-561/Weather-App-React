@@ -1,11 +1,12 @@
 import axios from "axios";
 import { useState,useEffect } from "react";
 import { useSelector } from "react-redux";
+import conf from "../conf/conf";
 
 function currentInfo(){
     const location = useSelector(state=>state.location)
     const [data,setData] = useState({})
-    const apiKey = '9c4711a44bd52c6f69da6ddafd193fcd'
+    const apiKey = conf.weatherAPIkey
     useEffect(()=>{
         const fetchWeatherInfo = async ()=>{
             try {
